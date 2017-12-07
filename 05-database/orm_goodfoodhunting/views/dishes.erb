@@ -1,0 +1,20 @@
+<h1>All dishes</h1>
+<a href="/dishes/new">New Dish</a>
+
+<% @dishes.each do |dish| %>
+   <article class="dish">
+      <h2><a href="/dishes/<%= dish.id %>"><%= dish.name %></a>
+      </h2>
+      <!-- <a href="/dish-details?id=<%#= dish.id %>"><%#= dish['name'] %></a> -->
+      <a href="/dishes/<%= dish.id %>/edit">edit</a>
+
+      <% if logged_in? %>
+         <form action="/dishes/<%= dish.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Delete</button>
+         </form>
+      <% end %>
+
+      <img src="<%= dish.image_url %>" alt="<%= dish.name %>">
+   </article>
+<% end %>

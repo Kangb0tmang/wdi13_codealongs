@@ -1,0 +1,10 @@
+<%= form_for @dish, html: { multipart: true } do |f| %>
+<label for="name">Name</label>
+<input type="text" name="name">
+  <p>
+    <label for="image">Image</label>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </p>
+  <button type="submit">Create Dish</button>
+<% end %>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Food Hunting</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+   <a href="/">Home</a>
+   <a href="/dishes">All Dishes</a>
+   <a href="javascript:history.back()">Back</a>
+
+   <% if logged_in? %>
+      Logged in as <%= current_user.id %>
+      <form action="/session" method="post">
+         <input type="hidden" name="_method" value="delete">
+         <button type="submit">Logout</button>
+      </form>
+   <% else %>
+      <a href="/login">Login</a>
+   <% end %>
+
+   <%= yield %>
+
+</body>
+</html>

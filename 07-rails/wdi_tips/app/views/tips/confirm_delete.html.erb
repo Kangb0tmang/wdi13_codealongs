@@ -1,0 +1,10 @@
+<h1>Are you sure you want to delete <%= @tip.title %>?</h1>
+<form action="/tips/<%= @tip.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <label for="title">Title</label>
+  <input type="text" name="title" value="<%= @tip.title %>">
+  <label for="content">Content</label>
+  <textarea name="content"><%= @tip.content %></textarea>
+  <button type="submit">Delete</button>
+</form>

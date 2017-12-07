@@ -1,0 +1,17 @@
+<h1><%= @tip.title %></h1>
+<h5>Tags: <%= @tip.tags_list %></h5>
+<div><%= raw @content_html %></div>
+<a href="/tips/<%= @tip.id %>/edit">Edit</a>
+<a href="/tips/<%= @tip.id %>/confirm_delete">Delete</a>
+
+<%= form_tag '/comments', method: 'post' do %>
+  <input type="hidden" name="tip_id" value="<%= @tip.id %>">
+  <label for="comment">Comment</label>
+  <textarea name="content"></textarea>
+  <button type="submit">Post Comment</button>
+<% end %>
+
+<h3>Comments</h3>
+<% @comments.each do |comment| %>
+  <p><%= comment.content %></p>
+<% end %>

@@ -1,0 +1,51 @@
+/*Body*/
+body
+{
+   margin: 0 auto;
+   background: lightgrey;
+}
+
+.container
+{
+   margin: 0 auto;
+   max-width: 1200px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*Main*/
+main
+{
+   display: inline-block;
+   width: 70%;
+   height: auto;
+   padding: 10px;
+   background: pink;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*Aside*/
+aside
+{
+   display: inline-block;
+   width: 29%;
+   height: auto;
+   vertical-align: top;
+   background: mistyrose;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+article
+{
+   background: lime;
+}
+
+article footer
+{
+   border-top: 1px dashed red;
+}

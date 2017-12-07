@@ -1,0 +1,67 @@
+body
+{
+   margin: 0;
+}
+
+ul
+{
+   list-style: none;
+}
+
+li
+{
+   margin-bottom: 10px;
+}
+
+.span-1,
+.span-2,
+.span-3
+{
+   margin-bottom: 10px;
+   min-height: 100px;
+   text-align: center;
+}
+
+.span-1
+{
+   background: mistyrose;
+}
+
+.span-2
+{
+   background: linen;
+}
+
+.span-3
+{
+   background: plum;
+}
+
+img
+{
+   max-width: 100%;
+}
+
+@media (min-width: 600px)
+{
+   ul li
+   {
+      display: inline-block;
+      margin-bottom: 0px;
+      margin-right: 10px;
+   }
+}
+
+@media (min-width: 1000px)
+{
+   ul li
+   {
+      display: inline-block;
+      margin-right: 30px;
+   }
+}
+
+@media (min-width: 1500px)
+{
+
+}

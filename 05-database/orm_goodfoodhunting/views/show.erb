@@ -1,0 +1,18 @@
+<img src="<%= @dish.image_url %>" alt="<%= @dish.name %>">
+<h2><%= @dish.name %></h2>
+
+<% if logged_in? %>
+   <form action="/comments" method="post">
+      <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+      <textarea name="content" rows="8" cols="40"></textarea>
+      <button type="submit">Post</button>
+   </form>
+<% end %>
+
+<% @comments.each do |comment| %>
+   <% if comment.user_id %>
+      <p><%= comment.content %></p>
+      <p><%= comment.user.email if comment.user %></p>
+      <!-- <p><%#= User.find(comment.user_id).email %></p> -->
+   <% end %>
+<% end %>

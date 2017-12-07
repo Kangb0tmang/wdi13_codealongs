@@ -1,0 +1,33 @@
+body
+{
+   max-width: 80%;
+}
+
+.span-1,
+.span-2,
+.span-3
+{
+   margin-right: 3.333333%; /* 20/60 = 0.03333333 */
+   margin-bottom: 10px;
+   float: left;
+   min-height: 100px;
+   text-align: center;
+}
+
+.span-1
+{
+   width: 30%; /* 180/600 = 0.3 */
+   background: mistyrose;
+}
+
+.span-2
+{
+   width: 63.333333%; /* 380/600 = .633333333 */
+   background: linen;
+}
+
+.span-3
+{
+   width: 96.666666%; /* 580/600 = .966666666 */
+   background: plum;
+}
